@@ -1,0 +1,56 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the associated paper."
+title: SymptomMonster
+abstract: >-
+  A pipeline for population-scale pharmacovigilance signal detection from
+  paired pre/post-treatment clinical notes using local large language models
+  and a per-pair scrambled-surrogate empirical null.
+type: software
+version: 0.1.0
+license: MIT
+repository-code: "https://github.com/GoldenholzLab/SymptomMonster"
+authors:
+  - family-names: Bhansali
+    given-names: Rohan M.
+    affiliation: "Harvard Medical School; Beth Israel Deaconess Medical Center"
+  - family-names: Boruah
+    given-names: Abhilasha
+    affiliation: "Harvard Medical School; Beth Israel Deaconess Medical Center"
+  - family-names: Daya
+    given-names: Annika
+    affiliation: "Harvard Medical School; Beth Israel Deaconess Medical Center"
+  - family-names: Joshi
+    given-names: Sweta
+    affiliation: "Harvard Medical School; Beth Israel Deaconess Medical Center"
+  - family-names: Vo
+    given-names: Hugh
+    affiliation: "Northeastern University"
+  - family-names: Westover
+    given-names: M Brandon
+    affiliation: "Harvard Medical School; Beth Israel Deaconess Medical Center; Stanford University"
+  - family-names: Goldenholz
+    given-names: Daniel M.
+    affiliation: "Harvard Medical School; Beth Israel Deaconess Medical Center"
+preferred-citation:
+  type: article
+  title: >-
+    Population-Scale, Automated Estimation of Antiseizure-Medication Symptom
+    Signals from Clinical Notes Using Large Language Models with a Per-Pair
+    Empirical Null
+  authors:
+    - family-names: Bhansali
+      given-names: Rohan M.
+    - family-names: Boruah
+      given-names: Abhilasha
+    - family-names: Daya
+      given-names: Annika
+    - family-names: Joshi
+      given-names: Sweta
+    - family-names: Vo
+      given-names: Hugh
+    - family-names: Westover
+      given-names: M Brandon
+    - family-names: Goldenholz
+      given-names: Daniel M.
+  year: 2026
+  notes: "Manuscript under review; DOI to be added upon publication."

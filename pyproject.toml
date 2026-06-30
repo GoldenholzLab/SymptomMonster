@@ -1,0 +1,58 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "symptommonster"
+dynamic = ["version"]
+description = "Population-scale pharmacovigilance signal detection from clinical notes using local LLMs and a per-pair empirical null."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+keywords = [
+    "pharmacovigilance",
+    "clinical-nlp",
+    "large-language-models",
+    "adverse-drug-reactions",
+    "signal-detection",
+]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+]
+dependencies = [
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "pandas>=2.0",
+    "statsmodels>=0.14",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+ollama = ["ollama>=0.3"]
+mlx = ["mlx-lm>=0.12"]
+dev = ["pytest>=7.4", "ruff>=0.4"]
+
+[project.scripts]
+symptommonster = "symptommonster.cli:main"
+
+[tool.hatch.version]
+path = "src/symptommonster/__init__.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/symptommonster"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "W"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"

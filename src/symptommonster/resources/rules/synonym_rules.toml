@@ -1,0 +1,481 @@
+# Tier-2 synonym rules: variant phrasing mapped to a canonical symptom term.
+#
+# Rules are tried in order and the first whose pattern matches the preprocessed
+# (lowercased) term wins, so more specific rules come before the broader ones
+# they would otherwise be caught by. Patterns are case-insensitive regular
+# expressions and stay clinically generic, with no drug, indication, or cohort
+# terms. Some distinctions are kept apart on purpose: suicidal versus homicidal
+# ideation, headache versus migraine, nausea versus vomiting, numbness versus
+# abnormal sensation, and tremor versus ataxia.
+
+[[rule]]
+canonical = "Suicidal ideation"
+patterns = ['\bsuicid']
+
+[[rule]]
+canonical = "Homicidal ideation"
+patterns = ['\bhomicid']
+
+[[rule]]
+canonical = "Migraine"
+patterns = ['\bmigrain']
+
+[[rule]]
+canonical = "Headache"
+patterns = ['\bheadache|head\s*pain|cephalg|head\s*(fullness|tightness|pressure)']
+
+[[rule]]
+canonical = "Depression"
+patterns = ['\bdepress|low mood|dysphori']
+
+[[rule]]
+canonical = "Anxiety"
+patterns = ['\banxi|anxious|nervous(ness)?|panic']
+
+[[rule]]
+canonical = "Emotional lability"
+patterns = ['\bemotional\s*(labil|instab|dysregul)|mood\s*(swing|labil|change|instab|disturbance|problem|symptom)|moodiness|mood\b']
+
+[[rule]]
+canonical = "Apathy"
+patterns = ['\bapathy|flat affect|anhedoni|lack of motivation']
+
+[[rule]]
+canonical = "Irritability"
+patterns = ['\birritab|cranky|grouch|short temper|impatien']
+
+[[rule]]
+canonical = "Aggression"
+patterns = ['\baggress|hostil|\brage\b|violen|angry|\banger\b|\bbiting\b|\bhitting\b']
+
+[[rule]]
+canonical = "Agitation"
+patterns = ['\bagitat|restless|combative']
+
+[[rule]]
+canonical = "Impulsivity"
+patterns = ['\bimpulsiv|disinhibit']
+
+[[rule]]
+canonical = "Psychosis"
+patterns = ['\bpsychos[ie]|psychot']
+
+[[rule]]
+canonical = "Hallucination"
+patterns = ['\bhallucin']
+
+[[rule]]
+canonical = "Mania"
+patterns = ['\bmania\b|manic|hypomani']
+
+[[rule]]
+canonical = "Paranoia"
+patterns = ['\bparanoi']
+
+[[rule]]
+canonical = "Personality change"
+patterns = ['\bpersonality\s*change']
+
+[[rule]]
+canonical = "Crying"
+patterns = ['\bcrying\b|tearful']
+
+[[rule]]
+canonical = "Cognitive impairment"
+patterns = ['\bcogniti|brain fog|foggi|mental fog|mental slow|memory|forgetful|amnesi|confus|disorient|delirium|altered mental status|word[- ]?finding|anomia|dysnomia|concentrat|attention\s*deficit|distractib|loss of focus|difficulty\s*focus|poor\s*concentration|\bdazed\b|out of it|\bfuzzy|fuzziness|mental\s*fuzz|\bspacey|spaced\s*out|zoning?\s*out|zoned\s*out|\babsentmind|perseverat|\bslow\w*\s*think|inattenti|\bcloudy']
+
+[[rule]]
+canonical = "Tremor"
+patterns = ['\btremor|tremulous|shak(e|ing|iness)\b']
+
+[[rule]]
+canonical = "Myoclonus"
+patterns = ['\bmyoclon|myoclonic\s*jerk|muscle\s*(jerk|twitch)']
+
+[[rule]]
+canonical = "Dystonia"
+patterns = ['\bdyston|\bgrimac']
+
+[[rule]]
+canonical = "Ataxia"
+patterns = ['\bataxia|gait\s*(instab|unstead|disturb|imbalance)|incoordinat|discoordinat|clumsi|unsteady\s*gait|balance\s*(difficult|problem)']
+
+[[rule]]
+canonical = "Dizziness"
+patterns = ['\bdizzi|dizzy|lighthead|woozy|woozi|unstead|vertigo|\bspinning|\bwobb(?:ly|iness|y)|\bstagger|\boff[- ]?balance|\bfloating|\bpresyncopal']
+
+[[rule]]
+canonical = "Nystagmus"
+patterns = ['\bnystagm']
+
+[[rule]]
+canonical = "Dysarthria"
+patterns = ['\bdysarthr|slurred?\s*speech|speech\s*(difficult|disorder|problem)']
+
+[[rule]]
+canonical = "Aphasia"
+patterns = ['\baphasi|dysphasi']
+
+[[rule]]
+canonical = "Dysesthesia"
+patterns = ['\bdysesthe']
+
+[[rule]]
+canonical = "Dysesthesia"
+patterns = ['\belectric\w*\s*(?:shock|sensation)|shock\w*\s*sensation|jittery\s*shock|shock[- ]?like']
+
+[[rule]]
+canonical = "Dysesthesia"
+patterns = ['\bburning\b(?!\s*on\s*urinat)']
+
+[[rule]]
+canonical = "Dysesthesia"
+patterns = ['\bbuzz(?:ing)?(?:\s|$)|\bsting(?:ing)?\b|\bcrawl(?:ing)?\b|\bformication']
+
+[[rule]]
+canonical = "Paraesthesia"
+patterns = ['\bneedl(?:e|ing)']
+
+[[rule]]
+canonical = "Paraesthesia"
+patterns = ['\bparesthe|paraesthe|tingl|numb(ness)?\b|pins and needles']
+
+[[rule]]
+canonical = "Weakness"
+patterns = ['\bweakness\b|weak\b|hemipar']
+
+[[rule]]
+canonical = "Falls"
+patterns = ['\bfalls?\b']
+
+[[rule]]
+canonical = "Syncope"
+patterns = ['\bsyncop']
+
+[[rule]]
+canonical = "Encephalopathy"
+patterns = ['\bencephalop']
+
+[[rule]]
+canonical = "Dyskinesia"
+patterns = ['\bdyskines']
+
+[[rule]]
+canonical = "Akathisia"
+patterns = ['\bakathisi|acathisi']
+
+[[rule]]
+canonical = "Akinesia"
+patterns = ['\bakines']
+
+[[rule]]
+canonical = "Involuntary movements"
+patterns = ['\binvoluntary\s*movement|twitch|eye\s*(?:lid\s*)?flutter|head\s*(?:jerk|nod|drop)']
+
+[[rule]]
+canonical = "Photophobia"
+patterns = ['\bphotophob']
+
+[[rule]]
+canonical = "Tinnitus"
+patterns = ['\btinnit']
+
+[[rule]]
+canonical = "Stuttering"
+patterns = ['\bstutter']
+
+[[rule]]
+canonical = "Insomnia"
+patterns = ['\binsomni|sleepless|trouble\s*(fall|sleep)|difficulty\s*sleep|poor\s*sleep|sleep\s*(difficult|problem|disturbance)|nocturnal\s*(awakening|waking)|night\s*(waking|awakening)|difficulty\s*(initiating|maintaining)\s*sleep']
+
+[[rule]]
+canonical = "Nightmares"
+patterns = ['\bnightmare|vivid\s*dream|bad\s*dream|abnormal\s*dream|strange\s*dream|weird\s*dream|disturbing\s*dream|odd\s*dream|intense\s*dream']
+
+[[rule]]
+canonical = "REM sleep behavior disorder"
+patterns = ['\brem\s*sleep\s*behavio|dream\s*enactment|sleep\s*enactment|acting\s*out\s*dream']
+
+[[rule]]
+canonical = "Sleep disturbance"
+patterns = ['\bsleep\s*(dysregulat|disrupt)|sleep\s*wake\s*cycle']
+
+[[rule]]
+canonical = "Hypersomnia"
+patterns = ['\bhypersomn|excess\w*\s*sleep']
+
+[[rule]]
+canonical = "Somnolence"
+patterns = ['\bsomno|drowsi|drowsy|sleepiness|sleepy|sedat(ion|ed)|grogg|sluggish|lethar|\bdrugged(?:\s*(?:feeling|sensation))?|\bhangover|\bnodding\s*off|\bintoxicat']
+
+[[rule]]
+canonical = "Fatigue"
+patterns = ['\bfatigu|tired|tiredness|exhaust|low\s*energy|no\s*energy|lack\s*of\s*energy|malaise']
+
+[[rule]]
+canonical = "Weight gain"
+patterns = ['\bweight\s*gain|gain(ed)?\s*weight|weight\s*increase']
+
+[[rule]]
+canonical = "Weight loss"
+patterns = ['\bweight\s*loss|los[te]\s*weight|weight\s*decrease|loss in weight']
+
+[[rule]]
+canonical = "Fever"
+patterns = ['\bfever\b|febril|pyrexia']
+
+[[rule]]
+canonical = "Edema"
+patterns = ['\bedema|oedema|swell']
+
+[[rule]]
+canonical = "Vomiting"
+patterns = ['\bvomit|emesis\b']
+
+[[rule]]
+canonical = "Nausea"
+patterns = ['\bnausea|nauseous|nauseated|sick to stomach|upset stomach|gi upset|\bgagg']
+
+[[rule]]
+canonical = "Diarrhea"
+patterns = ['\bdiarrh|loose\s*(stool|bowel)']
+
+[[rule]]
+canonical = "Constipation"
+patterns = ['\bconstipat']
+
+[[rule]]
+canonical = "Abdominal pain"
+patterns = ['\babdomin|stomach\s*(pain|cramp)|epigastr']
+
+[[rule]]
+canonical = "Dysphagia"
+patterns = ['\bdysphag|swallow|\bglobus|\bchok(?:ing|e)\b']
+
+[[rule]]
+canonical = "Dry mouth"
+patterns = ['\bdry\s*mouth|xerostom']
+
+[[rule]]
+canonical = "Decreased appetite"
+patterns = ['\bappetite|anorexi']
+
+[[rule]]
+canonical = "Bloating"
+patterns = ['\bbloat']
+
+[[rule]]
+canonical = "Heartburn"
+patterns = ['\bheartburn|indigest|gastroesoph|gerd\b|reflux']
+
+[[rule]]
+canonical = "Drooling"
+patterns = ['\bdrool|sialorrh']
+
+[[rule]]
+canonical = "Dysgeusia"
+patterns = ['\bmetallic\s*taste|dysgeusia|taste\s*(change|loss|disturbance)|loss of taste']
+
+[[rule]]
+canonical = "Hiccups"
+patterns = ['\bhiccup']
+
+[[rule]]
+canonical = "Pancreatitis"
+patterns = ['\bpancreatit']
+
+[[rule]]
+canonical = "Hepatotoxicity"
+patterns = ['\bhepat|liver\s*(injury|damage|fail)|transaminit']
+
+[[rule]]
+canonical = "Rash"
+patterns = ['\brash\b|maculopapular|eruption|drug\s*rash|skin\s*reaction|prurit|itch']
+
+[[rule]]
+canonical = "Urticaria"
+patterns = ['\burticari|hives']
+
+[[rule]]
+canonical = "Alopecia"
+patterns = ['\balopeci|hair\s*(loss|thin|shed)']
+
+[[rule]]
+canonical = "Acne"
+patterns = ['\bacne']
+
+[[rule]]
+canonical = "Photosensitivity"
+patterns = ['\bphotosensit']
+
+[[rule]]
+canonical = "Bruising"
+patterns = ['\bbruis']
+
+[[rule]]
+canonical = "Hyperhidrosis"
+patterns = ['\bhyperhidros|sweat|diaphores|night\s*sweat']
+
+[[rule]]
+canonical = "Flushing"
+patterns = ['\bflush|hot\s*flash']
+
+[[rule]]
+canonical = "Stevens-Johnson syndrome"
+patterns = ['\bstevens.johnson|sjs\b|toxic\s*epidermal']
+
+[[rule]]
+canonical = "Diplopia"
+patterns = ['\bdiplopi|double\s*vision']
+
+[[rule]]
+canonical = "Blurred vision"
+patterns = ['\bblur\w*\s*vision|vision\s*(blur|change|problem)|visual\s*(disturbance|change|impair)']
+
+[[rule]]
+canonical = "Dry eyes"
+patterns = ['\bdry\s*eye']
+
+[[rule]]
+canonical = "Bradycardia"
+patterns = ['\bbradycardi']
+
+[[rule]]
+canonical = "Tachycardia"
+patterns = ['\btachycardi|palpitat']
+
+[[rule]]
+canonical = "Hypotension"
+patterns = ['\bhypotens|orthostatic']
+
+[[rule]]
+canonical = "Hypertension"
+patterns = ['\bhypertens']
+
+[[rule]]
+canonical = "QTc prolongation"
+patterns = ['\bqtc\b|qt\s*prolong']
+
+[[rule]]
+canonical = "Hyponatremia"
+patterns = ['\bhyponatr|siadh']
+
+[[rule]]
+canonical = "Metabolic acidosis"
+patterns = ['\bmetabolic\s*acidosis']
+
+[[rule]]
+canonical = "Leukopenia"
+patterns = ['\bleukopeni|neutropeni']
+
+[[rule]]
+canonical = "Thrombocytopenia"
+patterns = ['\bthrombocytopen']
+
+[[rule]]
+canonical = "Hyperglycemia"
+patterns = ['\bhyperglyce|elevated\s*(blood\s*)?sugar']
+
+[[rule]]
+canonical = "Hypocalcemia"
+patterns = ['\bhypocalce']
+
+[[rule]]
+canonical = "Hypokalemia"
+patterns = ['\bhypokalem']
+
+[[rule]]
+canonical = "Hyperammonemia"
+patterns = ['\bhyperammon']
+
+[[rule]]
+canonical = "Anemia"
+patterns = ['\banemi']
+
+[[rule]]
+canonical = "Pancytopenia"
+patterns = ['\bpancytopen']
+
+[[rule]]
+canonical = "Nephrolithiasis"
+patterns = ['\bnephrolith|kidney\s*stone']
+
+[[rule]]
+canonical = "Renal impairment"
+patterns = ['\brenal\s*(failure|injury|impair)|acute\s*kidney|\baki\b']
+
+[[rule]]
+canonical = "Muscle pain"
+patterns = ['\bmuscle\s*(pain|ache|sore)|myalgi']
+
+[[rule]]
+canonical = "Cramps"
+patterns = ['\bmuscle\s*(cramp|spasm)|cramp']
+
+[[rule]]
+canonical = "Joint pain"
+patterns = ['\bjoint\s*pain|arthralg']
+
+[[rule]]
+canonical = "Back pain"
+patterns = ['\bback\s*pain']
+
+[[rule]]
+canonical = "Rhabdomyolysis"
+patterns = ['\brhabdomyol']
+
+[[rule]]
+canonical = "Dyspnea"
+patterns = ['\bdyspne|shortness\s*of\s*breath|\bsob\b']
+
+[[rule]]
+canonical = "Cough"
+patterns = ['\bcough']
+
+[[rule]]
+canonical = "Urinary incontinence"
+patterns = ['\burinary\s*incontin|incontinenc']
+
+[[rule]]
+canonical = "Urinary retention"
+patterns = ['\burinary\s*retent']
+
+[[rule]]
+canonical = "Polyuria"
+patterns = ['\bnocturi|frequent\s*urinat|polyuri']
+
+[[rule]]
+canonical = "Sexual dysfunction"
+patterns = ['\bsexual\s*dysfunc|erectile|libido']
+
+[[rule]]
+canonical = "Self-harm"
+patterns = ['\bself[- ]?(?:harm|injur|abus)']
+
+[[rule]]
+canonical = "Obsessive-compulsive behavior"
+patterns = ['\bocd\b|obsessive[- ]?compulsive']
+
+[[rule]]
+canonical = "Enuresis"
+patterns = ['\bbed\s*wett|enuresis|bedwett']
+
+[[rule]]
+canonical = "Dysuria"
+patterns = ['\bdysuri|burning\s*on\s*urinat']
+
+[[rule]]
+canonical = "Cold intolerance"
+patterns = ['\bfeeling\s*cold|\bcold\s*(?:sensation|intolerance|hypersensit)']
+
+[[rule]]
+canonical = "Malaise"
+patterns = ['\bfeeling\s*(?:off|weird|out\s*of\s*sorts|strange|funny|loopy|unwell|nonspecific|worn|odd)|\bodd\s*(?:feeling|sensation)']
+
+[[rule]]
+canonical = "Malaise"
+patterns = ['\bgeneral(?:ized)?\s*(?:unwell|discomfort)\b']
+
+[[rule]]
+canonical = "Pain"
+patterns = ['\bpain\b']

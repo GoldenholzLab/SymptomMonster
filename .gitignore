@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+.env
+
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Editors / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Data and run artifacts never belong in this repo.
+# The package ships method code only; inputs and outputs stay local. Alias maps,
+# vocabularies, and reference dumps are JSON, so JSON is excluded too; force-add
+# an example file (git add -f) if one ever needs to ship.
+/data/
+/run/
+/out/
+/outputs/
+*.jsonl
+*.json
+*.csv
+*.parquet
+*.png
+*.pdf
+*.docx
+*.xlsx
+*.npy
+*.npz
